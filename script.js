@@ -40,6 +40,41 @@ closeItemModalBtn.addEventListener("click", (e) => {
     itemModal.style = "display: none";
 });
 
+/****************************** */
+/* HAMBURGER
+/****************************** */
+
+let icon = false;
+
+let hamburgerBtn = document.querySelector(".hamburger");
+let sideBar = document.querySelector(".side-bar");
+
+const handleDropdown = (event) => {
+    console.log(event.target)
+    if (event.target.matches('.hamburger, .hamburger::after, .hamburger::before')) {
+        if (!icon) {
+            hamburgerBtn.style = "background-color: transparent;";
+            hamburgerBtn.animate({ rotate: ["0deg", "140deg"] }, { duration: 300, fill: "forwards", pseudoElement: "::after" });
+            hamburgerBtn.animate({ top: "-5px", rotate: ["0deg", "-140deg"] }, { duration: 300, fill: "forwards", pseudoElement: "::before" });
+
+            sideBar.animate({left: "0px"}, { duration: 300, fill: "forwards" });
+            sideBar.style = "top: 57px; height: 100vh; z-index: 100; width: 30rem;";
+
+            icon = true;
+        } else {
+            hamburgerBtn.style = "background-color: white;";
+            hamburgerBtn.animate({ rotate: ["135deg", "0deg"] }, { duration: 300, fill: "forwards", pseudoElement: "::after" });
+            hamburgerBtn.animate({ top: "-10px", rotate: ["-135deg", "0deg"] }, { duration: 300, fill: "forwards", pseudoElement: "::before" });
+
+            sideBar.animate({left: "-400px"}, { duration: 300, fill: "forwards" });
+            // sideBar.style = "top: 57px; height: 100vh; z-index: 100; width: 30rem;";
+            icon = false;
+        }
+    }
+};
+
+hamburgerBtn.addEventListener("click", handleDropdown);
+
 // TODO CONTROLLER
 let todoController = (function() {
     class TodoList {
