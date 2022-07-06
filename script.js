@@ -163,8 +163,8 @@ let UIController = (function() {
             </td>
             <td>
                 <div class="todo-buttons">
-                    <button class="delete-btn btn">&times; Delete</button>
-                    <button class="complete-btn btn">${obj.status === "Ongoing" ? "Mark Complete" : "Mark Ongoing"}</button>
+                    <button class="delete-btn btn"><img src="assets/delete.png" class="icon"></button>
+                    <button class="complete-btn btn btn-grad">${obj.status === "Ongoing" ? "Mark Complete" : "Mark Ongoing"}</button>
                 </div>
             </td>
         </tr>`;
@@ -175,7 +175,7 @@ let UIController = (function() {
         addTodoList(obj) {
             let html, element;
             element = DOMStrings.listContainer;
-            html = `<li class="list-item" data-id=${obj.name}>${obj.name} <button class="todolist-btn">&times; Delete</button></li>`;
+            html = `<li class="list-item" data-id=${obj.name}>${obj.name} <button class="todolist-btn"><img src="assets/delete.png" class="icon"></button></li>`;
             // Insert the HTML into the DOM
             document.querySelector(element).insertAdjacentHTML('beforeend', html);
         },

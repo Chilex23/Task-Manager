@@ -16,6 +16,11 @@
     --heading: 'Permanent Marker', cursive;
 }
 
+.icon {
+    height: 2rem;
+    width: 2rem;
+}
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -24,7 +29,7 @@ html {
 body {
     line-height: 1.6;
     font-family: 'Archivo Narrow', sans-serif;
-
+    background-color: #fafafa;
     /* font-family: 'Open Sans', sans-serif; */ 
 }
 
@@ -40,16 +45,18 @@ body {
     text-transform: uppercase;
     text-align: center;
     padding: 1rem 0;
-    background-color: var(--secondary-color-accent);
+    color: #eee;
+    background-color: black;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .side-bar {
-    background-color: var(--secondary-color-accent);
+    background-color: black;
 }
 
 .side-bar-heading {
     font-size: 2.4rem;
+    color: #eee;
     text-align: center;
     text-transform: uppercase;
     font-family: var(--heading);
@@ -64,7 +71,7 @@ ul {
     justify-content: space-between;
     font-size: 2rem;
     padding: .5rem 1rem;
-    background-color: antiquewhite;
+    background-color: #fff;
     margin-bottom: 1rem;
     cursor: pointer;
 }
@@ -98,6 +105,7 @@ ul {
 .btn {
     font-size: 1.3rem;
     text-transform: uppercase;
+    height: 4rem;
     font-weight: 600;
     cursor: pointer;
     border: none;
@@ -115,9 +123,9 @@ ul {
 
 .list-name {
     font-size: 2.4rem;
+    font-family: var(--heading);
     text-transform: uppercase;
     text-align: center;
-    text-decoration: underline;
     margin-bottom: 2rem;
 }
 
@@ -125,9 +133,10 @@ ul {
     font-size: 2rem;
     display: none;
     min-height: fit-content;
+    border-radius: 1rem;
     padding: 2rem;
     width: 40rem;
-    background-color: silver;
+    background-color: #fafafa;
     color: black;
     position: fixed;
     top: 10rem;
@@ -137,11 +146,15 @@ ul {
 }
 
 .header-4 {
+    font-family: var(--heading);
     text-align: center;
     text-transform: uppercase;
 }
 
 .input-header {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
     display: block;
     margin-left: 2rem;
 }
@@ -168,15 +181,24 @@ input, select {
 
 table {
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-td {
-    padding: .5rem;
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+th {
+    padding: 1rem;
 }
 
 thead {
     text-transform: uppercase;
+    background-color: rgb(37, 37, 37);
+    color: #fff;
 }
 
 .todo-item {
@@ -184,5 +206,35 @@ thead {
 }
 
 .delete-btn {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.705);
+}
+
+.todo-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+         
+.btn-grad {
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    margin: 10px;
+    padding: 1.5rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: black;           
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }

@@ -17,7 +17,7 @@
             <div class="todo-list-item">
                 <h1 class="side-bar-heading">Todo Lists</h1>
                 <ul class="list-container">
-                    <!-- <li class="list-item">Grocery</li>
+                    <!-- <li class="list-item">Grocery <button class="todolist-btn"><img src="assets/delete.png" class="icon"></button></li>
                     <li class="list-item">Chores</li> -->
                 </ul>
             </div>
@@ -28,7 +28,7 @@
             </header>
             <div class="action-btns">
                 <div class="create-list">
-                    <button class="btn list-btn">create list</button>
+                    <button class="btn-grad list-btn">create todo list</button>
                     <div class="list-modal modal">
                         <h4 class="header-4">Create a Todo List</h4>
                         <label for="name" class="input-header">List Name</label>
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="create-item">
-                    <button class="btn item-btn">create item</button>
+                    <button class="btn-grad item-btn">create todo item</button>
                     <div class="item-modal modal">
                         <h4 class="header-4">Create a Todo Item</h4>
                         <label for="list" class="input-header">Select A Todo List</label>
@@ -62,7 +62,7 @@
             <h2 class="list-name">Create a List or Click a List on the Side Bar to View</h2>
 
             <div class="todo-item-list">
-                <table border="black">
+                <table>
                     <thead>
                         <tr>
                             <th>S/N</th>
@@ -84,7 +84,7 @@
                             </td>
                             <td>
                                 <div class="todo-buttons">
-                                    <button class="delete-btn btn">&times; Delete</button>
+                                    <button class="delete-btn btn"><img src="assets/delete.png" class="icon"></button>
                                     <button class="complete-btn btn">Mark Complete</button>
                                 </div>
                             </td>
