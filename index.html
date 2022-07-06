@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="side-bar">
+            <div class="todo-list-item">
+                <h1 class="side-bar-heading">Todo Lists</h1>
+                <ul class="list-container">
+                    <!-- <li class="list-item">Grocery</li>
+                    <li class="list-item">Chores</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <header class="header">
+                <h1>TodoManager</h1>
+            </header>
+            <div class="action-btns">
+                <div class="create-list">
+                    <button class="btn list-btn">create list</button>
+                    <div class="list-modal modal">
+                        <h4 class="header-4">Create a Todo List</h4>
+                        <label for="name" class="input-header">List Name</label>
+                        <input type="text" placeholder="Enter List Name" id="name">
+                        <div class="modal-btns">
+                            <button class="btn submit-list-btn">Submit</button>
+                            <button class="list-modal-btn btn delete-btn">&times; Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-item">
+                    <button class="btn item-btn">create item</button>
+                    <div class="item-modal modal">
+                        <h4 class="header-4">Create a Todo Item</h4>
+                        <label for="list" class="input-header">Select A Todo List</label>
+                        <select id="list" name="todo-list">
+                            <!-- <option value="grocery">Grocery</option>
+                            <option value="chores">Chores</option> -->
+                        </select>
+                        <label for="item-name" class="input-header">Todo Name</label>
+                        <input type="text" placeholder="Enter Todo Name" id="item-name">
+                        <div class="modal-btns">
+                            <button class="btn todo-btn">Submit</button>
+                            <button class="item-modal-btn btn delete-btn">&times; Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="list-name">Create a List or Click a List on the Side Bar to View</h2>
+
+            <div class="todo-item-list">
+                <table border="black">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Action Buttons</th>
+                        </tr>
+                    </thead>
+                    <tbody class="todo-item-container">
+                        <!-- <tr class="todo-item">
+                            <td>
+                                <h3>1</h3>
+                            </td>
+                            <td>
+                                <h3>Cooking yam and oil</h3>
+                            </td>
+                            <td>
+                                <h3>Completed</h3>
+                            </td>
+                            <td>
+                                <div class="todo-buttons">
+                                    <button class="delete-btn btn">&times; Delete</button>
+                                    <button class="complete-btn btn">Mark Complete</button>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
