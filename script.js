@@ -200,6 +200,7 @@ let UIController = (function() {
                 <div class="todo-buttons">
                     <button class="delete-btn btn"><img src="assets/delete.png" class="icon"></button>
                     <button class="complete-btn btn btn-grad">${obj.status === "Ongoing" ? "Mark Complete" : "Mark Ongoing"}</button>
+                    <div class="label">Due Soon</div>
                 </div>
             </td>
         </tr>`;
