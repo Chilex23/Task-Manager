@@ -50,7 +50,7 @@ let hamburgerBtn = document.querySelector(".hamburger");
 let sideBar = document.querySelector(".side-bar");
 
 const handleDropdown = (event) => {
-    console.log(event.target)
+    //console.log(event.target)
     if (event.target.matches('.hamburger, .hamburger::after, .hamburger::before')) {
         if (!icon) {
             hamburgerBtn.style = "background-color: transparent;";
@@ -58,7 +58,7 @@ const handleDropdown = (event) => {
             hamburgerBtn.animate({ top: "-5px", rotate: ["0deg", "-140deg"] }, { duration: 300, fill: "forwards", pseudoElement: "::before" });
 
             sideBar.animate({left: "0px"}, { duration: 300, fill: "forwards" });
-            sideBar.style = "top: 57px; height: 100vh; z-index: 100; width: 30rem;";
+            sideBar.style = "top: 55px; height: 100vh; z-index: 100; width: 30rem;";
 
             icon = true;
         } else {

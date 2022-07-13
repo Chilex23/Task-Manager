@@ -145,6 +145,7 @@ ul {
     transform: translate(-50%, 10%);
     box-shadow: 0 0 0 999px rgba(0,0,0,.8);
     transition: all 2s;
+    z-index: 90;
 }
 
 .header-4 {
@@ -251,8 +252,8 @@ thead {
 .hamburger {
     visibility: hidden;
     position: absolute;
-    left: 20px;
-    top: 30px;
+    left: 2rem;
+    top: 4rem;
     background-color: #fff;
     display: inline-block;
     height: 2px;
