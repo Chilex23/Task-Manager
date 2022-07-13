@@ -270,7 +270,7 @@ let controller = (function (todoCtrl, UICtrl) {
                 deleteTodoList(String(name));
                 UICtrl.clearLists();
                 UICtrl.clearTodos();
-                document.querySelector(DOM.listHeader).textContent = "Create a List or Click a List on the Side Bar to View"
+                document.querySelector(DOM.listHeader).textContent = "Todo Items";
                 // Get all the remaining lists
                 let lists = todoCtrl.getAllTodoLists();
                 // Render to the UI
